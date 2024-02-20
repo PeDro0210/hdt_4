@@ -1,5 +1,5 @@
 package com.Structures.classes;
 
-class PostFixStack<T> {
+public class PostFixStack<T> {
 
 }
