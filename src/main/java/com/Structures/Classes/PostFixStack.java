@@ -1,5 +1,6 @@
-import java.util.LinkedList;
-import com.Structures.Interfaces.*;
+package com.Structures.classes;
+
+import com.Structures.Interfaces.DynamicStack;
 /**
  * Implementación de una pila dinámica utilizando una lista enlazada.
  * Esta clase representa una pila en la cual los elementos se agregan y eliminan
@@ -10,8 +11,8 @@ import com.Structures.Interfaces.*;
  *
  * @param <T> el tipo de elementos que se almacenarán en la pila
  */
+public class PostFixStack<T> implements DynamicStack<T> {
 
-public class PostFixStack<T>  implements DynamicStack<T>{
     public UVGLinkedList<T> stack;
 
     /**
@@ -29,8 +30,6 @@ public class PostFixStack<T>  implements DynamicStack<T>{
      */
     @Override
     public void push(T value) {
-        stack.addFirst(value);
-
         stack.add(value);
     }
 
@@ -42,11 +41,9 @@ public class PostFixStack<T>  implements DynamicStack<T>{
      */
     @Override
     public T pop() {
-        if (stack.isEmpty()) {
         if (isEmpty()) {
             throw new RuntimeException("El PostFixStack está vacío");
         }
-        return stack.removeFirst();
         return stack.removeLast();
     }
 
@@ -59,8 +56,6 @@ public class PostFixStack<T>  implements DynamicStack<T>{
     @Override
     public T top() {
         try {
-            if (!stack.isEmpty()) {
-                return stack.getFirst();
             if (isEmpty() == false) {
                 return stack.getHead();
             }
@@ -68,11 +63,9 @@ public class PostFixStack<T>  implements DynamicStack<T>{
         } catch (RuntimeException e) {
             e.printStackTrace();
         }
-        return null; 
         return null;
     }
 
-    public int size(){
     /**
      * Devuelve el tamaño actual de la pila.
      *
@@ -89,9 +82,6 @@ public class PostFixStack<T>  implements DynamicStack<T>{
      */
     @Override
     public boolean isEmpty() {
-        return stack.isEmpty();
         return stack.size() == 0;
     }
-
-
 }

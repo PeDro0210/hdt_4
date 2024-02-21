@@ -1,4 +1,5 @@
-package com.Structures.Classes;
+package com.Structures.classes;
+
 import com.Structures.Interfaces.UVGList;
 
 /**
@@ -25,7 +26,6 @@ public class UVGLinkedList<T> implements UVGList<T> {
         Node<T> newNode = new Node<T>(value);
         newNode.next = head;
         head = newNode;
-
     }
 
     /**
@@ -34,29 +34,25 @@ public class UVGLinkedList<T> implements UVGList<T> {
      * @return el último elemento de la lista, o null si la lista está vacía.
      */
     @Override
-
     public T removeLast() {
         if (head == null) {
             return null;
         }
-        if (head.next == null) {
-            T value = head.data;
-            head = null;
-            return value;
-        }
-        Node<T> current = head;
-        while (current.next.next != null) {
-            current = current.next;
-        }
-        T value = current.next.data;
-        current.next = null;
+        T value = head.data;
+        head = head.next;
         return value;
     }
-
 
     /**
      * Imprime los elementos de la lista en orden.
      */
+    public void printNodes() {
+        Node<T> current = head;
+        while (current != null) {
+            System.out.println(current.data);
+            current = current.next;
+        }
+    }
 
     /**
      * Devuelve el tamaño actual de la lista.
@@ -66,10 +62,12 @@ public class UVGLinkedList<T> implements UVGList<T> {
     public int size() {
         int count = 0;
         Node<T> current = head;
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
         return count;
     }
-
-
 
     /**
      * Devuelve el primer elemento de la lista.

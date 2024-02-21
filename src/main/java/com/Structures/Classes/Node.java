@@ -1,4 +1,4 @@
-package com.Structures.Classes;
+package com.Structures.classes;
 
 public class Node<T> {
     public T data;
