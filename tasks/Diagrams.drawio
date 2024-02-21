@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="tcYnHNwd3wbtSPxdZRV_" name="UML">
-        <mxGraphModel dx="948" dy="649" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="357" dy="907" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -20,22 +20,22 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="14" value="&amp;lt;&amp;lt;Stack Object&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;PostFixStack&amp;lt;G&amp;gt;&lt;/b&gt;&lt;br&gt;{class}" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=55;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" parent="1" vertex="1">
-                    <mxGeometry x="200" y="100" width="140" height="160" as="geometry"/>
+                    <mxGeometry x="200" y="80" width="150" height="180" as="geometry"/>
                 </mxCell>
                 <mxCell id="15" value="attributes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="14" vertex="1">
-                    <mxGeometry y="55" width="140" height="20" as="geometry"/>
+                    <mxGeometry y="55" width="150" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="16" value="-Stack:LinkedList&amp;lt;G&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="14" vertex="1">
-                    <mxGeometry y="75" width="140" height="20" as="geometry"/>
+                    <mxGeometry y="75" width="150" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="17" value="" style="line;strokeWidth=1;fillColor=#a20025;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;fontColor=#ffffff;strokeColor=#6F0000;" parent="14" vertex="1">
-                    <mxGeometry y="95" width="140" height="8" as="geometry"/>
+                    <mxGeometry y="95" width="150" height="8" as="geometry"/>
                 </mxCell>
                 <mxCell id="18" value="operations" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="14" vertex="1">
-                    <mxGeometry y="103" width="140" height="20" as="geometry"/>
+                    <mxGeometry y="103" width="150" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="&lt;font color=&quot;#787878&quot;&gt;+ Push(G x):void&lt;br&gt;+ Pop():G&lt;br&gt;+ Top():G&lt;br&gt;+ IsEmpty():bool&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="14" vertex="1">
-                    <mxGeometry y="123" width="140" height="37" as="geometry"/>
+                    <mxGeometry y="123" width="150" height="57" as="geometry"/>
                 </mxCell>
                 <mxCell id="48" style="edgeStyle=none;html=1;entryX=0.497;entryY=1.084;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=#787878;endArrow=diamondThin;endFill=1;" parent="1" source="20" target="47" edge="1">
                     <mxGeometry relative="1" as="geometry">
@@ -148,6 +148,9 @@
                 </mxCell>
                 <mxCell id="89" value="Head:int&lt;br&gt;Data:G&lt;br&gt;NextNode:Node" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="87" vertex="1">
                     <mxGeometry y="75" width="140" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="Return G&amp;nbsp; es de dato genérico" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="660" width="80" height="100" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
