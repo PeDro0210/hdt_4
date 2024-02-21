@@ -3,8 +3,8 @@ import com.Structures.classes.Stacks.*;
 import com.Structures.Interfaces.DynamicStack;
 
 public class StackFactory {
-    private StackFactory instance;
-    public StackFactory GetInstance(){
+    private static StackFactory instance;
+    public static StackFactory GetInstance(){
         if (instance == null){
             instance = new StackFactory();
         }

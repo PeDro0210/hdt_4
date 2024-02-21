@@ -12,8 +12,9 @@ public class App
         String[] data = loader.loadFile();
 
         IntoPostConvertor inFix = new IntoPostConvertor();
-        StackFactory stackFactory = new StackFactory();
-        DynamicStack<Character> stack;      
+        StackFactory stackFactory = StackFactory.GetInstance();
+        DynamicStack<Character> stackletters;      
+        DynamicStack<Integer> stackexpresions;
 
         System.out.println("Cual Tipo de Stack desea usar?");
         System.out.println("1. Array");
@@ -29,22 +30,31 @@ public class App
 
         switch(stackType) {
             case 1:
-                stack = stackFactory.CreateStack("Array");
+                stackletters = stackFactory.CreateStack("Array");
+                stackexpresions = stackFactory.CreateStack("Array");
                 break;
             case 2:
-                stack = stackFactory.CreateStack("LL");
+                stackletters = stackFactory.CreateStack("LL");
+                stackexpresions = stackFactory.CreateStack("LL");
                 break;
             case 3:
-                stack = stackFactory.CreateStack("Vector");
+                stackletters = stackFactory.CreateStack("Vector");
+                stackexpresions = stackFactory.CreateStack("Vector");
                 break;
             default:
-                stack = stackFactory.CreateStack("Array");
+                stackletters = stackFactory.CreateStack("Array");
+                stackexpresions = stackFactory.CreateStack("Array");
                 break;
         }
 
         for (String exp : data) {
-            String result = inFix.InFixToPostFix(stack, exp);
-            System.out.println(result);
+            String result = inFix.InFixToPostFix(stackletters, exp);
+            System.out.println("Infix: " + exp);
+            System.out.println("Postfix: " + result);
+            for (int i = 0; i < result.length(); i++) {
+                CalculatorPostFix.OperationPostFix(stackexpresions, result.charAt(i));
+            }
+            System.out.println("Resultado: " + stackexpresions.pop());
         }
 
 

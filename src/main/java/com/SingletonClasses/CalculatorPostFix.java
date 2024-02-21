@@ -1,7 +1,7 @@
 package com.SingletonClasses;
 
 
-import com.Structures.classes.Stacks.PostFixStackLl;
+import com.Structures.Interfaces.DynamicStack;
 /**
  * Operaciones de evaluación
  */
@@ -16,7 +16,7 @@ public class CalculatorPostFix {
      * @throws ArithmeticException se divide por cero
      * @throws IllegalArgumentException el caracter no es valido
      */
-    public static void OperationPostFix(PostFixStackLl<Integer> stack, Character item) {
+    public static void OperationPostFix(DynamicStack<Integer> stack, Character item) {
         String allUseCharacters = "+-*/0123456789";
 
         int result = 0;
