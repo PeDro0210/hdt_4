@@ -2,7 +2,7 @@ package com;
 
 import org.junit.Test;
 
-import com.Structures.classes.PostFixStack;
+import com.Structures.classes.Stacks.PostFixStackLl;
 
 import static org.junit.Assert.*;
 
@@ -10,7 +10,7 @@ public class PostFixStackTest {
 
     @Test
     public void testPushAndPop() {
-        PostFixStack<Integer> stack = new PostFixStack<>();
+        PostFixStackLl<Integer> stack = new PostFixStackLl<>();
         stack.push(1);
         stack.push(2);
         stack.push(3);
@@ -23,7 +23,7 @@ public class PostFixStackTest {
     
     @Test
     public void testTop() {
-        PostFixStack<String> stack = new PostFixStack<>();
+        PostFixStackLl<String> stack = new PostFixStackLl<>();
         stack.push("Hello");
         stack.push("World");
         stack.push("!");
@@ -38,7 +38,7 @@ public class PostFixStackTest {
 
     @Test
     public void testSize() {
-        PostFixStack<Character> stack = new PostFixStack<>();
+        PostFixStackLl<Character> stack = new PostFixStackLl<>();
         assertEquals(0, stack.size());
         stack.push('a');
         stack.push('b');
@@ -53,7 +53,7 @@ public class PostFixStackTest {
 
     @Test
     public void testIsEmpty() {
-        PostFixStack<Integer> stack = new PostFixStack<>();
+        PostFixStackLl<Integer> stack = new PostFixStackLl<>();
         assertTrue(stack.isEmpty());
         stack.push(1);
         assertFalse(stack.isEmpty());

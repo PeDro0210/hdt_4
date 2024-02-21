@@ -1,8 +1,9 @@
 package com.SingletonClasses;
-import com.Structures.classes.PostFixStack;
+import com.Structures.classes.Stacks.*;
+import com.Structures.Interfaces.DynamicStack;
 
 public class StackFactory {
-    private static StackFactory instance;
+    private StackFactory instance;
     public StackFactory GetInstance(){
         if (instance == null){
             instance = new StackFactory();
@@ -10,8 +11,19 @@ public class StackFactory {
         return instance;
     }
     
-    public PostFixStack CreateStack(){
-        return new PostFixStack();
+    public <T> DynamicStack<T> CreateStack(String type){
+        switch (type){
+            case "LL":
+                return new PostFixStackLl<T>();
+            case "Array":
+                return new PostFixStackA<T>();
+            case "Vector":
+                return new PostFixStackV<T>();
+            default:
+                return null;
+        }
+
     }
+
 
 }

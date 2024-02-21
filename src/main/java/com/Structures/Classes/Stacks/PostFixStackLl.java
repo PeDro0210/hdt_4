@@ -1,7 +1,8 @@
-package com.Structures.classes;
+package com.Structures.classes.Stacks;
 
 
 import com.Structures.Interfaces.DynamicStack;
+import com.Structures.classes.UVGLinkedList;
 /**
  * Implementación de una pila dinámica utilizando una lista enlazada.
  * Esta clase representa una pila en la cual los elementos se agregan y eliminan
@@ -12,7 +13,7 @@ import com.Structures.Interfaces.DynamicStack;
  *
  * @param <T> el tipo de elementos que se almacenarán en la pila
  */
-public class PostFixStack<T> implements DynamicStack<T> {
+public class PostFixStackLl<T> implements DynamicStack<T> {
 
     public UVGLinkedList<T> stack;
 
@@ -20,7 +21,7 @@ public class PostFixStack<T> implements DynamicStack<T> {
      * Crea una nueva instancia de PostFixStack.
      * Inicializa la lista enlazada interna utilizada para almacenar los elementos de la pila.
      */
-    public PostFixStack() {
+    public PostFixStackLl() {
         this.stack = new UVGLinkedList<T>();
     }
 
