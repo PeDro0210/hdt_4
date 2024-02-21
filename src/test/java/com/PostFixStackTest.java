@@ -20,6 +20,7 @@ public class PostFixStackTest {
         assertTrue(stack.isEmpty());
     }
 
+    
     @Test
     public void testTop() {
         PostFixStack<String> stack = new PostFixStack<>();

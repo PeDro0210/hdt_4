@@ -1,6 +1,7 @@
 package com.Structures.Interfaces;
 
 
+
 public interface DynamicStack<T> {
         /**
          * Agrega un elemento a la pila.

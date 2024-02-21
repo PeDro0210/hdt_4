@@ -28,6 +28,7 @@ public class UVGLinkedListTest {
         assertEquals(2, list.size());
     }
 
+    
     @Test
     public void testPrintNodes() {
         UVGLinkedList<Character> list = new UVGLinkedList<>();

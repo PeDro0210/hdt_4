@@ -77,4 +77,5 @@ public class UVGLinkedList<T> implements UVGList<T> {
     public T getHead() {
         return head.data;
     }
+
 }

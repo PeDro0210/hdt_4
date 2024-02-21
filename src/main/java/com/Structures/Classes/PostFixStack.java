@@ -1,5 +1,6 @@
 package com.Structures.classes;
 
+
 import com.Structures.Interfaces.DynamicStack;
 /**
  * Implementación de una pila dinámica utilizando una lista enlazada.
