@@ -4,6 +4,10 @@ import java.io.IOException;
 
 import com.SingletonClasses.*;
 import com.Structures.Interfaces.DynamicStack;
+/**
+ * Esta clase representa la aplicación principal que realiza la conversión de expresiones infix a postfix
+ * y evalúa las expresiones postfix utilizando diferentes tipos de pilas.
+ */
 public class App 
 {
     public static void main( String[] args )

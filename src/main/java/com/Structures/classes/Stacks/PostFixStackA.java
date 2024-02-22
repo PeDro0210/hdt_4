@@ -1,8 +1,8 @@
 package com.Structures.classes.Stacks;
 
-
 import com.Structures.Interfaces.DynamicStack;
 import java.util.ArrayList;
+
 /**
  * Implementación de una pila dinámica utilizando una lista enlazada.
  * Esta clase representa una pila en la cual los elementos se agregan y eliminan
@@ -19,7 +19,8 @@ public class PostFixStackA<T> implements DynamicStack<T> {
 
     /**
      * Crea una nueva instancia de PostFixStack.
-     * Inicializa la lista enlazada interna utilizada para almacenar los elementos de la pila.
+     * Inicializa la lista enlazada interna utilizada para almacenar los elementos
+     * de la pila.
      */
     public PostFixStackA() {
         this.stack = new ArrayList<T>();
@@ -44,7 +45,7 @@ public class PostFixStackA<T> implements DynamicStack<T> {
     @Override
     public T pop() {
         if (isEmpty()) {
-            throw new RuntimeException("El PostFixStack está vacío");
+            throw new RuntimeException("La pila PostFixStack está vacía");
         }
         return stack.remove(stack.size() - 1);
     }
@@ -61,7 +62,7 @@ public class PostFixStackA<T> implements DynamicStack<T> {
             if (isEmpty() == false) {
                 return stack.get(stack.size() - 1);
             }
-            throw new RuntimeException("El PostFixStack está vacío");
+            throw new RuntimeException("La pila PostFixStack está vacía");
         } catch (RuntimeException e) {
             e.printStackTrace();
         }

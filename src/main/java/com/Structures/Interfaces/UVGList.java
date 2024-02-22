@@ -10,9 +10,6 @@ public interface UVGList<T> {
      * @param value el valor del elemento a agregar.
      */
     void add(T value);
-
-
-    
     /**
      * Remueve y devuelve el último elemento de la lista.
      * @return el último elemento de la lista.
